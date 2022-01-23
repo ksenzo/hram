@@ -573,6 +573,13 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   color: #737373;
   margin-bottom: 12px;
+  height: 73px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .right__card-btn {
@@ -1326,6 +1333,7 @@ input::-webkit-inner-spin-button {
 
   .right__card-img {
     max-width: 239px;
+    max-height: 159px;
   }
 }
 
