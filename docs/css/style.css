@@ -276,14 +276,12 @@ input::-webkit-inner-spin-button {
 }
 
 .mobile-menu {
-  height: 0;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   visibility: hidden;
   overflow: hidden;
   position: fixed;
-  right: 0;
   z-index: 20;
 }
 
@@ -302,10 +300,6 @@ input::-webkit-inner-spin-button {
   background: #ffff;
 }
 
-.mobile-menu__body :not(:last-child) {
-  margin-bottom: 12px;
-}
-
 .mobile-menu__link {
   color: #000000;
   background: #ffff;
@@ -315,7 +309,6 @@ input::-webkit-inner-spin-button {
 }
 
 .mobile-menu.__active {
-  height: 200px;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
@@ -901,7 +894,7 @@ input::-webkit-inner-spin-button {
 }
 
 .footer__title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Cormorant Infant";
   font-weight: bold;
   font-size: 36px;
@@ -978,6 +971,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 320px) {
+  body.__noscroll {
+    overflow: hidden;
+  }
+
   .header__body {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1022,9 +1019,34 @@ input::-webkit-inner-spin-button {
   }
 
   .mobile-menu {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     top: 112px;
+    height: 100%;
+    right: -100%;
+  }
+
+  .mobile-menu__body {
+    margin-bottom: 250px;
+  }
+
+  .mobile-menu__body :not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .mobile-menu.__active {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
   }
 
   .slider-wrap {
@@ -1257,6 +1279,10 @@ input::-webkit-inner-spin-button {
     top: 131px;
   }
 
+  .mobile-menu__body :not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   .slider-wrap {
     padding-top: 142px;
   }
@@ -1320,6 +1346,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 768px) {
+  body.__noscroll {
+    overflow: auto;
+  }
+
   .header__title {
     font-size: 36px;
   }
@@ -1334,6 +1364,19 @@ input::-webkit-inner-spin-button {
 
   .mobile-menu {
     top: 143px;
+    height: 0;
+    display: block;
+    right: 0;
+  }
+
+  .mobile-menu__body {
+    margin-bottom: 0;
+  }
+
+  .mobile-menu.__active {
+    height: 200px;
+    width: 365px;
+    background: unset;
   }
 
   .slider {

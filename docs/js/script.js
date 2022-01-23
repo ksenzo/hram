@@ -1,11 +1,13 @@
 let openMenu = document.querySelector('.header__btn-mobile');
 let menuMobile = document.querySelector('.mobile-menu');
 let openMenuSpan = document.querySelector('.header__span');
+let body = document.querySelector('body');
 
 if (openMenu) {
    openMenu.addEventListener('click', () => {
       openMenuSpan.classList.toggle('__active');
       menuMobile.classList.toggle('__active');
+      body.classList.toggle('__noscroll');
    });
 }
 
