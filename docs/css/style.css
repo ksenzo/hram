@@ -554,7 +554,7 @@ input::-webkit-inner-spin-button {
 }
 
 .right__card-title {
-  font-family: "CormorantInfant";
+  font-family: "Cormorant Infant";
   font-weight: 600;
   font-size: 24px;
   font-style: italic;
@@ -812,7 +812,7 @@ input::-webkit-inner-spin-button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 36px;
+  padding: 32px 35px 35px 35px;
   background: #ffffff;
 }
 
@@ -821,6 +821,7 @@ input::-webkit-inner-spin-button {
   font-style: italic;
   font-weight: 600;
   font-size: 24px;
+  line-height: 17px;
   color: #262626;
   margin-bottom: 25px;
 }
@@ -1639,7 +1640,7 @@ input::-webkit-inner-spin-button {
   }
 
   .pagination {
-    width: 84%;
+    width: 81%;
     margin-left: 25px;
   }
 
